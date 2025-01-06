@@ -7,7 +7,15 @@ const faqs = [
   },
   {
     question: "Is it safe to visit Sri Lanka?",
-    answer: "Yes, Sri Lanka is generally safe for tourists. Like any destination, it's important to take normal precautions. The country has a well-developed tourism infrastructure and is known for its hospitable people."
+    answer: "Yes, Sri Lanka is generally safe for tourists. Like any destination, it's important to take normal precautions. Due to the nation's religious society, avoid public displays of affection, especially if you are a member of the LGBTQ+ community."
+  },
+  {
+    question: "Can I contribute to the app?",
+    answer: "Thank you for your interest! If you are interested in helping with development or funding, please email us at travellanka@gmail.com."
+  },
+  {
+    question: "Where can I learn Sinhala as a second language?",
+    answer: "Our app currently only offers basic conversational Sinhala. If you would like to learn Sinhala as a 2nd language, please email us at travellanka@gmail.com."
   }
 ];
 
