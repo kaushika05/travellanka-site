@@ -46,11 +46,11 @@ const Index = () => {
           </p>
           <p className="text-white text-2xl font-bold mb-8">COMING SOON - JOIN THE BETA BELOW!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-black text-white px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
+            <button className="bg-primary text-white px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors">
               <Download size={20} />
               Get it on Google Play
             </button>
-            <button className="bg-black text-white px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
+            <button className="bg-primary text-white px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors">
               <Download size={20} />
               Get it on App Store
             </button>

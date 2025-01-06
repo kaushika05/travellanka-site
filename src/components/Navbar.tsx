@@ -26,6 +26,8 @@ const Navbar = () => {
           <div className="hidden md:flex md:items-center md:space-x-8">
             <a href="#features" className="text-gray-700 hover:text-primary">Features</a>
             <a href="#community" className="text-gray-700 hover:text-primary">Community</a>
+            <a href="#contact" className="text-gray-700 hover:text-primary">Contact</a>
+            <a href="#about" className="text-gray-700 hover:text-primary">About</a>
             <a href="#faq" className="text-gray-700 hover:text-primary">FAQ</a>
           </div>
         </div>
@@ -48,6 +50,20 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Community
+            </a>
+            <a
+              href="#contact"
+              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Contact
+            </a>
+            <a
+              href="#about"
+              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              About
             </a>
             <a
               href="#faq"
