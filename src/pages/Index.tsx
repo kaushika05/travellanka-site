@@ -1,8 +1,32 @@
 import Navbar from '../components/Navbar';
 import FAQ from '../components/FAQ';
 import { Download, Globe, BookOpen, Building2 } from 'lucide-react';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
 
 const Index = () => {
+  const form = useForm({
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+      joinBeta: false,
+      marketing: false,
+    },
+  });
+
+  const onSubmit = async (data: any) => {
+    // In a real implementation, you would send this to your backend
+    // For now, we'll just show a success toast
+    console.log("Form submitted:", data);
+    toast.success("Message sent successfully!");
+    form.reset();
+  };
+
   return (
     <div className="min-h-screen font-inter">
       <Navbar />
@@ -64,6 +88,126 @@ const Index = () => {
           <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
             Join our Discord Server
           </button>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Join the Beta or Contact Us</h2>
+          <Form {...form}>
+            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Email</FormLabel>
+                    <FormControl>
+                      <Input type="email" placeholder="your@email.com" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Message</FormLabel>
+                    <FormControl>
+                      <Textarea placeholder="Your message" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <div className="space-y-4">
+                <FormField
+                  control={form.control}
+                  name="joinBeta"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>
+                          I want to join the beta program
+                        </FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="marketing"
+                  render={({ field }) => (
+                    <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value}
+                          onCheckedChange={field.onChange}
+                        />
+                      </FormControl>
+                      <div className="space-y-1 leading-none">
+                        <FormLabel>
+                          I consent to receiving occasional marketing messages
+                        </FormLabel>
+                      </div>
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-dark transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+          </Form>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-16 px-4 bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
+          <div className="prose prose-lg mx-auto">
+            <p className="text-gray-600 mb-6">
+              As a solo developer with American-Sri Lankan heritage, I created TravelLanka to bridge cultures and share the beauty of Sri Lanka with the world. Growing up between two cultures gave me a unique perspective on the importance of cultural exchange and understanding.
+            </p>
+            <p className="text-gray-600 mb-6">
+              My journey in creating this app stems from a deep desire to share my Sri Lankan heritage and make it accessible to travelers worldwide. I believe that language is the key to truly experiencing a culture, and that's why TravelLanka focuses on teaching conversational Sinhala alongside travel planning.
+            </p>
+            <div className="bg-white p-6 rounded-lg shadow-sm mt-8">
+              <h3 className="text-xl font-semibold mb-4">Technologies Used</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <li>Flutter/Dart for cross-platform mobile development</li>
+                <li>Google Firebase for backend infrastructure</li>
+                <li>Google Gemini AI for intelligent travel planning</li>
+                <li>Figma for UI/UX design</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

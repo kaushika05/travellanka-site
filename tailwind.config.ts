@@ -28,9 +28,9 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: '#ea384c',
-          light: '#ff5a6e',
-          dark: '#d41e32',
+          DEFAULT: '#8B0000', // Changed to a deeper maroon
+          light: '#a31919',
+          dark: '#660000',
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
@@ -63,7 +63,7 @@ export default {
         inter: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-custom': 'linear-gradient(111.4deg, rgba(238,113,113,1) 1%, rgba(246,215,148,1) 58%)',
+        'gradient-custom': 'linear-gradient(111.4deg, rgba(139,0,0,1) 1%, rgba(246,215,148,1) 58%)', // Updated gradient
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in',
