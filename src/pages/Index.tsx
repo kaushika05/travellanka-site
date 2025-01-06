@@ -20,8 +20,6 @@ const Index = () => {
   });
 
   const onSubmit = async (data: any) => {
-    // In a real implementation, you would send this to your backend
-    // For now, we'll just show a success toast
     console.log("Form submitted:", data);
     toast.success("Message sent successfully!");
     form.reset();
@@ -32,16 +30,21 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4 bg-gradient-custom">
-        <div className="max-w-6xl mx-auto text-center">
+      <section className="pt-24 pb-16 px-4 bg-gradient-custom relative">
+        {/* Sri Lankan flag overlay */}
+        <div 
+          className="absolute inset-0 bg-[url('/sri-lanka-flag.png')] bg-cover bg-center opacity-20 mix-blend-overlay"
+          aria-hidden="true"
+        />
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="w-24 h-24 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-            {/* Replace with actual logo */}
             <span className="text-primary text-3xl font-bold">TL</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">TravelLanka</h1>
           <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
             Your ultimate companion for learning Sinhala and exploring Sri Lanka. Plan your journey and immerse yourself in the local culture.
           </p>
+          <p className="text-white text-2xl font-bold mb-8">COMING SOON - JOIN THE BETA BELOW!</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-black text-white px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-800 transition-colors">
               <Download size={20} />
@@ -55,7 +58,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section id="features" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
@@ -78,7 +80,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Community Section */}
       <section id="community" className="py-16 px-4 bg-gradient-to-r from-primary to-secondary">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Join Our Community</h2>
@@ -91,7 +92,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       <section className="py-16 px-4 bg-white">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Join the Beta or Contact Us</h2>
@@ -191,6 +191,13 @@ const Index = () => {
       <section className="py-16 px-4 bg-gray-50">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">About Us</h2>
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="/developer-image.png" 
+              alt="Developer" 
+              className="w-48 h-48 rounded-full object-cover shadow-lg"
+            />
+          </div>
           <div className="prose prose-lg mx-auto">
             <p className="text-gray-600 mb-6">
               As a solo developer with American-Sri Lankan heritage, I created TravelLanka to bridge cultures and share the beauty of Sri Lanka with the world. Growing up between two cultures gave me a unique perspective on the importance of cultural exchange and understanding.
@@ -216,6 +223,10 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-50 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
+          <div className="flex justify-center gap-4 mb-4">
+            <img src="/us-flag.png" alt="US Flag" className="w-8 h-8 object-cover rounded-sm" />
+            <img src="/lk-flag.png" alt="Sri Lanka Flag" className="w-8 h-8 object-cover rounded-sm" />
+          </div>
           <div className="mb-4">
             <a href="/privacy" className="text-gray-600 underline hover:text-primary mr-4">Privacy Policy</a>
             <a href="/eula" className="text-gray-600 underline hover:text-primary">EULA</a>
