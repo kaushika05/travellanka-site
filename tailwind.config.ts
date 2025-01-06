@@ -28,7 +28,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: '#8B0000', // Changed to a deeper maroon
+          DEFAULT: '#8B0000', // Deep maroon
           light: '#a31919',
           dark: '#660000',
           foreground: "hsl(var(--primary-foreground))",
@@ -63,7 +63,7 @@ export default {
         inter: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-custom': 'linear-gradient(111.4deg, rgba(139,0,0,1) 1%, rgba(246,215,148,1) 58%)', // Updated gradient
+        'gradient-custom': 'linear-gradient(to right, #8B0000, #F97316)', // Updated gradient to match community section
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in',
