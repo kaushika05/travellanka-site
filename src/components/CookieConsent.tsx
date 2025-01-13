@@ -31,9 +31,6 @@ const CookieConsent = () => {
   const handleReject = () => {
     localStorage.setItem('cookieConsent', 'rejected');
     setShowConsent(false);
-  };
-
-  const handleExit = () => {
     window.location.href = 'https://www.google.com';
   };
 
@@ -58,14 +55,11 @@ const CookieConsent = () => {
               <Button onClick={handleAcceptAll} variant="default">
                 Accept All Cookies
               </Button>
-              <Button onClick={handleAcceptNecessary} variant="outline">
+              <Button onClick={handleAcceptNecessary} variant="ghost">
                 Accept Necessary Cookies Only
               </Button>
-              <Button onClick={handleReject} variant="secondary">
-                Reject All Cookies
-              </Button>
-              <Button onClick={handleExit} variant="destructive">
-                Exit Page
+              <Button onClick={handleReject} variant="ghost">
+                Reject All Cookies (exits page)
               </Button>
             </div>
           </div>
