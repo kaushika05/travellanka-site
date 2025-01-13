@@ -1,12 +1,13 @@
 import Navbar from '../components/Navbar';
 import { Button } from '../components/ui/button';
 import Footer from '../components/sections/Footer';
-import { toast } from 'sonner';
+import { useNavigate } from 'react-router-dom';
 
 const Terms = () => {
+    const navigate = useNavigate();
+
     const handleCancelSubscription = () => {
-        // This is where you'd implement the actual cancellation logic
-        toast.success("Subscription cancellation request received. Check your email for confirmation.");
+        navigate('/cancel-subscription');
     };
 
     return (

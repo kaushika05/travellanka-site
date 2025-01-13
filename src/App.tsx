@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Privacy from "./pages/Privacy";
 import Eula from "./pages/Eula";
 import Terms from "./pages/Terms";
+import CancelSubscription from "./pages/CancelSubscription";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/eula" element={<Eula />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cancel-subscription" element={<CancelSubscription />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
