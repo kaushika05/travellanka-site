@@ -23,9 +23,9 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-16 px-4 bg-gradient-custom">
+    <section className="py-16 px-4 bg-white">
       <div className="max-w-2xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 text-white">Join the Beta or Contact Us</h2>
+        <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Join the Beta or Contact Us</h2>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField
@@ -33,9 +33,9 @@ const ContactForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white">Name</FormLabel>
+                  <FormLabel className="text-gray-700">Name</FormLabel>
                   <FormControl>
-                    <Input placeholder="Your name" {...field} />
+                    <Input placeholder="Your name" {...field} className="bg-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -46,9 +46,9 @@ const ContactForm = () => {
               name="email"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white">Email</FormLabel>
+                  <FormLabel className="text-gray-700">Email</FormLabel>
                   <FormControl>
-                    <Input type="email" placeholder="your@email.com" {...field} />
+                    <Input type="email" placeholder="your@email.com" {...field} className="bg-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -59,9 +59,9 @@ const ContactForm = () => {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="text-white">Message</FormLabel>
+                  <FormLabel className="text-gray-700">Message</FormLabel>
                   <FormControl>
-                    <Textarea placeholder="Your message" {...field} />
+                    <Textarea placeholder="Your message" {...field} className="bg-white" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -77,11 +77,11 @@ const ContactForm = () => {
                       <Checkbox
                         checked={field.value}
                         onCheckedChange={field.onChange}
-                        className="border-white data-[state=checked]:bg-primary data-[state=checked]:border-white"
+                        className="border-gray-300 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
-                      <FormLabel className="text-white">
+                      <FormLabel className="text-gray-700">
                         I want to join the beta program
                       </FormLabel>
                     </div>
@@ -97,11 +97,11 @@ const ContactForm = () => {
                       <Checkbox
                         checked={field.value}
                         onCheckedChange={field.onChange}
-                        className="border-white data-[state=checked]:bg-primary data-[state=checked]:border-white"
+                        className="border-gray-300 data-[state=checked]:bg-primary data-[state=checked]:border-primary"
                       />
                     </FormControl>
                     <div className="space-y-1 leading-none">
-                      <FormLabel className="text-white">
+                      <FormLabel className="text-gray-700">
                         I consent to receiving occasional marketing messages
                       </FormLabel>
                     </div>
@@ -111,7 +111,7 @@ const ContactForm = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-white text-primary py-3 rounded-lg hover:bg-gray-100 transition-colors"
+              className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-light transition-colors"
             >
               Send Message
             </button>
