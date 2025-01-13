@@ -1,4 +1,6 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/sections/Footer';
+import { Link } from 'react-router-dom';
 
 const Privacy = () => {
     return (
@@ -148,16 +150,44 @@ const Privacy = () => {
 
                     <h2 className="text-xl font-semibold mt-6">Acceptance of Policy</h2>
                     <p>By using TravelLanka, you accept the terms of this Privacy Policy. If you do not agree, please discontinue use of the app.</p>
+
+                    <h2 className="text-xl font-semibold mt-6">Subscription and Payment Information</h2>
+                    <p>
+                        When you subscribe to TravelLanka Premium ($9.99/month), we collect and process payment information through our secure payment processor. For detailed terms regarding subscriptions, please refer to our <Link to="/terms" className="text-primary hover:underline">Terms and Conditions</Link>.
+                    </p>
+                    <h3 className="text-lg font-semibold mt-4">Payment Data Collection</h3>
+                    <ul className="list-disc ml-6">
+                        <li>Payment method details (processed securely by our payment provider)</li>
+                        <li>Billing address</li>
+                        <li>Subscription status and history</li>
+                        <li>Transaction records</li>
+                    </ul>
+
+                    <h3 className="text-lg font-semibold mt-4">Payment Data Usage</h3>
+                    <p>We use payment information to:</p>
+                    <ul className="list-disc ml-6">
+                        <li>Process subscription payments</li>
+                        <li>Manage recurring billing</li>
+                        <li>Provide customer support for billing issues</li>
+                        <li>Comply with financial regulations</li>
+                    </ul>
+
+                    <h3 className="text-lg font-semibold mt-4">Payment Security</h3>
+                    <p>
+                        We prioritize the security of your payment information:
+                    </p>
+                    <ul className="list-disc ml-6">
+                        <li>All payment processing is handled by PCI-DSS compliant providers</li>
+                        <li>We never store complete credit card information on our servers</li>
+                        <li>Payment data is encrypted during transmission</li>
+                    </ul>
+
+                    <p>
+                        For more information about subscription terms, billing practices, and cancellation policies, please review our <Link to="/terms" className="text-primary hover:underline">Terms and Conditions</Link>.
+                    </p>
                 </div>
             </div>
-
-            {/* Footer */}
-            <footer className="bg-gray-50 py-8 px-4">
-                <div className="max-w-6xl mx-auto text-center">
-                    <p className="text-gray-500 text-sm">© 2025 TravelLanka Inc. All rights reserved.</p>
-
-                </div>
-            </footer>
+            <Footer />
         </div>
     );
 };
