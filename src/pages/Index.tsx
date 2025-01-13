@@ -100,9 +100,17 @@ const Index = () => {
               <p>✓ Curated list of hidden gems and local secrets</p>
               <p>✓ Priority customer support</p>
             </div>
-            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Join Premium
+            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors mb-4">
+              Join Premium - $9.99/month
             </button>
+            <div>
+              <a 
+                href="/terms" 
+                className="text-white/90 text-sm underline hover:text-white transition-colors"
+              >
+                Terms and Conditions apply
+              </a>
+            </div>
           </div>
         </div>
       </section>
