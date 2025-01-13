@@ -25,7 +25,7 @@ const Index = () => {
     toast.success("Message sent successfully!");
     form.reset();
   };
-  
+
   return (
     <div className="min-h-screen font-inter">
       <Navbar />
@@ -90,8 +90,8 @@ const Index = () => {
       {/* Premium Section */}
       <section id="premium" className="py-16 px-4 bg-gradient-custom">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="relative w-12 h-12">
+          <div className="flex flex-col items-center justify-center gap-4 mb-8">
+            <div className="relative w-24 h-24">
               <img
                 src="/assets/travellanka_logo.svg"
                 alt="TravelLanka Logo"
