@@ -1,9 +1,20 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavigation = (sectionId: string) => {
+    setIsOpen(false);
+    if (location.pathname !== '/') {
+      navigate('/#' + sectionId);
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <nav className="fixed w-full bg-white/90 backdrop-blur-sm z-50 shadow-sm">
@@ -31,12 +42,12 @@ const Navbar = () => {
           
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-8">
-            <a href="#features" className="text-gray-700 hover:text-primary">Features</a>
-            <a href="#premium" className="text-gray-700 hover:text-primary">Premium</a>
-            <a href="#community" className="text-gray-700 hover:text-primary">Community</a>
-            <a href="#contact" className="text-gray-700 hover:text-primary">Contact</a>
-            <a href="#about" className="text-gray-700 hover:text-primary">About</a>
-            <a href="#faq" className="text-gray-700 hover:text-primary">FAQ</a>
+            <button onClick={() => handleNavigation('features')} className="text-gray-700 hover:text-primary">Features</button>
+            <button onClick={() => handleNavigation('premium')} className="text-gray-700 hover:text-primary">Premium</button>
+            <button onClick={() => handleNavigation('community')} className="text-gray-700 hover:text-primary">Community</button>
+            <button onClick={() => handleNavigation('contact')} className="text-gray-700 hover:text-primary">Contact</button>
+            <button onClick={() => handleNavigation('about')} className="text-gray-700 hover:text-primary">About</button>
+            <button onClick={() => handleNavigation('faq')} className="text-gray-700 hover:text-primary">FAQ</button>
           </div>
         </div>
       </div>
@@ -45,48 +56,42 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white border-t">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            <a
-              href="#features"
-              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
-              onClick={() => setIsOpen(false)}
+            <button
+              onClick={() => handleNavigation('features')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
             >
               Features
-            </a>
-            <a
-              href="#premium"
-              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
-              onClick={() => setIsOpen(false)}
+            </button>
+            <button
+              onClick={() => handleNavigation('premium')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
             >
               Premium
-            </a>
-            <a
-              href="#community"
-              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
-              onClick={() => setIsOpen(false)}
+            </button>
+            <button
+              onClick={() => handleNavigation('community')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
             >
               Community
-            </a>
-            <a
-              href="#contact"
-              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
-              onClick={() => setIsOpen(false)}
+            </button>
+            <button
+              onClick={() => handleNavigation('contact')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
             >
               Contact
-            </a>
-            <a
-              href="#about"
-              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
-              onClick={() => setIsOpen(false)}
+            </button>
+            <button
+              onClick={() => handleNavigation('about')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
             >
               About
-            </a>
-            <a
-              href="#faq"
-              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
-              onClick={() => setIsOpen(false)}
+            </button>
+            <button
+              onClick={() => handleNavigation('faq')}
+              className="block w-full text-left px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
             >
               FAQ
-            </a>
+            </button>
           </div>
         </div>
       )}
