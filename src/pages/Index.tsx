@@ -123,7 +123,7 @@ const Index = () => {
       {/* Contact Form Section */}
       <section className="py-16 px-4 bg-gradient-custom">
         <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Join the Beta or Contact Us</h2>
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Join the Beta or Contact Us</h2>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField
@@ -131,7 +131,7 @@ const Index = () => {
                 name="name"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Name</FormLabel>
+                    <FormLabel className="text-white">Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Your name" {...field} />
                     </FormControl>
@@ -144,7 +144,7 @@ const Index = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel className="text-white">Email</FormLabel>
                     <FormControl>
                       <Input type="email" placeholder="your@email.com" {...field} />
                     </FormControl>
@@ -157,7 +157,7 @@ const Index = () => {
                 name="message"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Message</FormLabel>
+                    <FormLabel className="text-white">Message</FormLabel>
                     <FormControl>
                       <Textarea placeholder="Your message" {...field} />
                     </FormControl>
@@ -175,10 +175,11 @@ const Index = () => {
                         <Checkbox
                           checked={field.value}
                           onCheckedChange={field.onChange}
+                          className="border-white data-[state=checked]:bg-primary data-[state=checked]:border-white"
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel>
+                        <FormLabel className="text-white">
                           I want to join the beta program
                         </FormLabel>
                       </div>
@@ -194,10 +195,11 @@ const Index = () => {
                         <Checkbox
                           checked={field.value}
                           onCheckedChange={field.onChange}
+                          className="border-white data-[state=checked]:bg-primary data-[state=checked]:border-white"
                         />
                       </FormControl>
                       <div className="space-y-1 leading-none">
-                        <FormLabel>
+                        <FormLabel className="text-white">
                           I consent to receiving occasional marketing messages
                         </FormLabel>
                       </div>
@@ -207,7 +209,7 @@ const Index = () => {
               </div>
               <button
                 type="submit"
-                className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-dark transition-colors"
+                className="w-full bg-white text-primary py-3 rounded-lg hover:bg-gray-100 transition-colors"
               >
                 Send Message
               </button>
@@ -250,10 +252,6 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-gray-50 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="flex justify-center gap-4 mb-4">
-            <img src="/assets/us-flag.png" alt="US Flag" className="w-14 h-10 object-cover rounded-sm" />
-            <img src="/assets/lk-flag.png" alt="Sri Lanka Flag" className="w-16 h-10 object-cover rounded-sm" />
-          </div>
           <div className="mb-4">
             <a href="/privacy" className="text-gray-600 underline hover:text-primary mr-4">Privacy Policy</a>
             <a href="/eula" className="text-gray-600 underline hover:text-primary">EULA</a>
