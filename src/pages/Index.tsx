@@ -62,7 +62,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Features Section */}
       <section id="features" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -85,7 +85,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Premium Section */}
       <section id="premium" className="py-16 px-4 bg-gradient-custom">
         <div className="max-w-6xl mx-auto text-center">
@@ -106,7 +106,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-
+      
       {/* Community Section */}
       <section id="community" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto text-center">
@@ -119,7 +119,7 @@ const Index = () => {
           </button>
         </div>
       </section>
-
+      
       {/* Contact Form Section */}
       <section className="py-16 px-4 bg-gradient-custom">
         <div className="max-w-2xl mx-auto">
@@ -217,7 +217,7 @@ const Index = () => {
           </Form>
         </div>
       </section>
-
+      
       {/* About Section */}
       <section id="about" className="py-16 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
@@ -249,6 +249,8 @@ const Index = () => {
         </div>
       </section>
 
+      <FAQ />
+      
       {/* Footer */}
       <footer className="bg-gray-50 py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
