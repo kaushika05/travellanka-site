@@ -25,6 +25,7 @@ const Navbar = () => {
           {/* Desktop menu */}
           <div className="hidden md:flex md:items-center md:space-x-8">
             <a href="#features" className="text-gray-700 hover:text-primary">Features</a>
+            <a href="#premium" className="text-gray-700 hover:text-primary">Premium</a>
             <a href="#community" className="text-gray-700 hover:text-primary">Community</a>
             <a href="#contact" className="text-gray-700 hover:text-primary">Contact</a>
             <a href="#about" className="text-gray-700 hover:text-primary">About</a>
@@ -43,6 +44,13 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
             >
               Features
+            </a>
+            <a
+              href="#premium"
+              className="block px-3 py-2 text-gray-700 hover:bg-primary/10 rounded-md"
+              onClick={() => setIsOpen(false)}
+            >
+              Premium
             </a>
             <a
               href="#community"

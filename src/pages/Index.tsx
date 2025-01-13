@@ -36,40 +36,39 @@ const Index = () => {
           className="absolute inset-0 bg-[url('/assets/sri-lanka-flag.png')] bg-cover bg-center opacity-20 mix-blend-overlay"
           aria-hidden="true"
         />
-          <div className="max-w-6xl mx-auto text-center relative z-10">
-              <div className="w-24 h-24 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <img
-                      src="/assets/travellanka_logo.svg"
-                      alt="TravelLanka Logo"
-                      className="w-16 h-16 object-cover"
-                  />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">TravelLanka</h1>
-              <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-                  Your ultimate companion for learning Sinhala and exploring Sri Lanka. Plan your journey and immerse
-                  yourself in the local culture.
-              </p>
-              <p className="text-white text-2xl font-bold mb-8">COMING SOON - JOIN THE BETA BELOW!</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button
-                      className="bg-primary text-white px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors">
-                      <Download size={20}/>
-                      Get it on Google Play
-                  </button>
-                  <button
-                      className="bg-primary text-white px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-dark transition-colors">
-                      <Download size={20}/>
-                      Get it on App Store
-                  </button>
-              </div>
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="w-24 h-24 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
+            <img
+              src="/assets/travellanka_logo.svg"
+              alt="TravelLanka Logo"
+              className="w-16 h-16 object-cover"
+            />
           </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">TravelLanka</h1>
+          <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            Your ultimate companion for learning Sinhala and exploring Sri Lanka. Plan your journey and immerse
+            yourself in the local culture.
+          </p>
+          <p className="text-white text-2xl font-bold mb-8">COMING SOON - JOIN THE BETA BELOW!</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-white text-primary px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
+              <Download size={20} />
+              Get it on Google Play
+            </button>
+            <button className="bg-white text-primary px-8 py-3 rounded-lg flex items-center justify-center gap-2 hover:bg-gray-100 transition-colors">
+              <Download size={20} />
+              Get it on App Store
+            </button>
+          </div>
+        </div>
       </section>
 
-        <section id="features" className="py-16 px-4 bg-white">
-            <div className="max-w-6xl mx-auto">
-                <div className="grid md:grid-cols-3 gap-8">
-                    <div className="bg-white p-6 rounded-lg border shadow-sm hover:shadow-md transition-shadow">
-                        <Globe className="w-12 h-12 text-primary mb-4" />
+      {/* Features Section */}
+      <section id="features" className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg border shadow-sm hover:shadow-md transition-shadow">
+              <Globe className="w-12 h-12 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">Create your itinerary with Google Gemini</h3>
               <p className="text-gray-600">Plan your perfect Sri Lankan adventure with AI-powered recommendations.</p>
             </div>
@@ -87,19 +86,42 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="community" className="py-16 px-4 bg-gradient-to-r from-primary to-secondary">
+      {/* Premium Section */}
+      <section id="premium" className="py-16 px-4 bg-gradient-custom">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Join Our Community</h2>
-          <p className="text-white/90 mb-8 max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8">TravelLanka Premium</h2>
+          <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <h3 className="text-2xl font-semibold text-white mb-6">Exclusive VIP Benefits</h3>
+            <div className="space-y-4 text-white/90 text-lg mb-8">
+              <p>✓ Access to our exclusive VIP Lounge</p>
+              <p>✓ Personal tour guides at discounted rates</p>
+              <p>✓ One-on-one sessions with native Sinhala speakers</p>
+              <p>✓ Advanced pronunciation workshops</p>
+              <p>✓ Curated list of hidden gems and local secrets</p>
+              <p>✓ Priority customer support</p>
+            </div>
+            <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Join Premium
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Community Section */}
+      <section id="community" className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">Join Our Community</h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
             Join our community to get insight and help from natives and fellow travelers as well as practice speaking to native speakers!
           </p>
-          <button className="bg-white text-primary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+          <button className="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
             Join our Discord Server
           </button>
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
+      {/* Contact Form Section */}
+      <section className="py-16 px-4 bg-gradient-custom">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-8">Join the Beta or Contact Us</h2>
           <Form {...form}>
@@ -194,39 +216,36 @@ const Index = () => {
         </div>
       </section>
 
-
-      <FAQ />
-
-        {/* About Us Section */}
-        <section className="py-16 px-4 bg-gradient-custom">
-            <div className="max-w-3xl mx-auto">
-                <h2 className="text-3xl text-white font-bold text-center mb-8">About Me</h2>
-                <div className="mb-8 flex justify-center">
-                    <img
-                        src="/assets/headshot.jpeg"
-                        alt="Developer"
-                        className="w-48 h-48 rounded-full object-cover shadow-lg"
-                    />
-                </div>
-                <div className="prose prose-lg mx-auto">
-                    <p className="text-white mb-6">
-                        As a solo developer with American-Sri Lankan heritage, I created TravelLanka to bridge cultures and share the beauty of Sri Lanka with the world. Growing up between two cultures gave me a unique perspective on the importance of cultural exchange and understanding.
-                    </p>
-                    <p className="text-white mb-6">
-                        My journey in creating this app stems from a deep desire to share my Sri Lankan heritage and make it accessible to travelers worldwide. I believe that language is the key to truly experiencing a culture, and that's why TravelLanka focuses on teaching conversational Sinhala alongside travel planning.
-                    </p>
-                    <div className="bg-white p-6 rounded-lg shadow-sm mt-8">
-                        <h3 className="text-xl font-semibold mb-4">Technologies Used</h3>
-                        <ul className="list-disc list-inside space-y-2 text-gray-600">
-                            <li>Flutter/Dart for cross-platform mobile development</li>
-                            <li>Google Firebase for backend infrastructure</li>
-                            <li>Google Gemini AI for intelligent travel planning</li>
-                            <li>Figma for UI/UX design</li>
-                        </ul>
-                    </div>
-                </div>
+      {/* About Section */}
+      <section id="about" className="py-16 px-4 bg-white">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl text-gray-800 font-bold text-center mb-8">About Me</h2>
+          <div className="mb-8 flex justify-center">
+            <img
+              src="/assets/headshot.jpeg"
+              alt="Developer"
+              className="w-48 h-48 rounded-full object-cover shadow-lg"
+            />
+          </div>
+          <div className="prose prose-lg mx-auto">
+            <p className="text-gray-800 mb-6">
+              As a solo developer with American-Sri Lankan heritage, I created TravelLanka to bridge cultures and share the beauty of Sri Lanka with the world. Growing up between two cultures gave me a unique perspective on the importance of cultural exchange and understanding.
+            </p>
+            <p className="text-gray-800 mb-6">
+              My journey in creating this app stems from a deep desire to share my Sri Lankan heritage and make it accessible to travelers worldwide. I believe that language is the key to truly experiencing a culture, and that's why TravelLanka focuses on teaching conversational Sinhala alongside travel planning.
+            </p>
+            <div className="bg-white p-6 rounded-lg shadow-sm mt-8">
+              <h3 className="text-xl font-semibold mb-4">Technologies Used</h3>
+              <ul className="list-disc list-inside space-y-2 text-gray-600">
+                <li>Flutter/Dart for cross-platform mobile development</li>
+                <li>Google Firebase for backend infrastructure</li>
+                <li>Google Gemini AI for intelligent travel planning</li>
+                <li>Figma for UI/UX design</li>
+              </ul>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-50 py-8 px-4">
