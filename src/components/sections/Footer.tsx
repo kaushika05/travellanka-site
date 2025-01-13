@@ -16,7 +16,7 @@ const Footer = () => {
             <Link to="/eula" className="text-gray-600 underline hover:text-primary mr-4">EULA</Link>
             <Button 
               variant="link" 
-              className="text-gray-600 underline hover:text-primary"
+              className="text-gray-600 underline hover:text-primary p-0"
               onClick={() => setShowCookiePreferences(true)}
             >
               Cookie Preferences
