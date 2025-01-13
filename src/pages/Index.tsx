@@ -25,7 +25,7 @@ const Index = () => {
     toast.success("Message sent successfully!");
     form.reset();
   };
-
+  
   return (
     <div className="min-h-screen font-inter">
       <Navbar />
@@ -90,7 +90,17 @@ const Index = () => {
       {/* Premium Section */}
       <section id="premium" className="py-16 px-4 bg-gradient-custom">
         <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">TravelLanka Premium</h2>
+          <div className="flex items-center justify-center gap-4 mb-8">
+            <div className="relative w-12 h-12">
+              <img
+                src="/assets/travellanka_logo.svg"
+                alt="TravelLanka Logo"
+                className="w-full h-full rounded-full bg-white p-2"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-200/50 to-yellow-400/50 mix-blend-overlay" />
+            </div>
+            <h2 className="text-3xl font-bold text-white">TravelLanka Premium</h2>
+          </div>
           <div className="bg-white/10 backdrop-blur-sm p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
             <h3 className="text-2xl font-semibold text-white mb-6">Exclusive VIP Benefits</h3>
             <div className="space-y-4 text-white/90 text-lg mb-8">
@@ -115,8 +125,7 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
-      {/* Community Section */}
+
       <section id="community" className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Join Our Community</h2>
