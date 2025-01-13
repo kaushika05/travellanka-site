@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const form = useForm({
@@ -104,12 +105,12 @@ const Index = () => {
               Join Premium - $9.99/month
             </button>
             <div>
-              <a 
-                href="/terms" 
+              <Link 
+                to="/terms" 
                 className="text-white/90 text-sm underline hover:text-white transition-colors"
               >
                 Terms and Conditions apply
-              </a>
+              </Link>
             </div>
           </div>
         </div>
