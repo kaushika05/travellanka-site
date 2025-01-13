@@ -1,6 +1,14 @@
 import Navbar from '../components/Navbar';
+import { Button } from '../components/ui/button';
+import Footer from '../components/sections/Footer';
+import { toast } from 'sonner';
 
 const Terms = () => {
+    const handleCancelSubscription = () => {
+        // This is where you'd implement the actual cancellation logic
+        toast.success("Subscription cancellation request received. Check your email for confirmation.");
+    };
+
     return (
         <div className="min-h-screen font-inter">
             <Navbar />
@@ -40,12 +48,17 @@ const Terms = () => {
                         may result in service interruption until resolved.
                     </p>
                 </div>
-            </div>
-            <footer className="bg-gray-50 py-8 px-4">
-                <div className="max-w-6xl mx-auto text-center">
-                    <p className="text-gray-500 text-sm">© 2025 TravelLanka Inc. All rights reserved.</p>
+                <div className="mt-12 text-center">
+                    <Button 
+                        variant="destructive"
+                        onClick={handleCancelSubscription}
+                        className="px-8"
+                    >
+                        Cancel My Subscription
+                    </Button>
                 </div>
-            </footer>
+            </div>
+            <Footer />
         </div>
     );
 };
